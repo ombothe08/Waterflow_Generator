@@ -1,0 +1,16 @@
+﻿  moc headers\Visualizer.h
+  moc headers\OpenGLWindow.h
+  stdafx.cpp
+  Findpath.cpp
+  main.cpp
+  MathUtility.cpp
+  OpenGLWindow.cpp
+  Point3D.cpp
+  Reader.cpp
+  Triangle.cpp
+  Triangulation.cpp
+  Visualizer.cpp
+  qrc_Visualizer.cpp
+  moc_Visualizer.cpp
+  moc_OpenGLWindow.cpp
+  Visualizer.vcxproj -> D:\Om_Workspace\QT_Projects\WaterPath\WaterPath_Flow\x64\Debug\Visualizer.exe
