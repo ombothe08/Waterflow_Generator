@@ -10,25 +10,25 @@ Triangle ::~Triangle()
 {
 }
 
-const int Triangle::v1() const
+const int Triangle::vertex1() const
 {
-    return mV1;
+    return mVertex1;
 }
 
-const int Triangle::v2() const
+const int Triangle::vertex2() const
 {
-    return mV2;
+    return mVertex2;
 }
 
-const int Triangle::v3() const
+const int Triangle::vertex3() const
 {
-    return mV3;
+    return mVertex3;
 }
 
 
 Triangle::Triangle(int v1, int v2, int v3)
 {
-    mV1 = v1;
-    mV2 = v2;
-    mV3 = v3;
+    mVertex1 = v1;
+    mVertex2 = v2;
+    mVertex3 = v3;
 }

@@ -1,11 +1,11 @@
 #include "stdafx.h"
-#include "OpenGLWindow.h"
 
 #include <QOpenGLContext>
 #include <QOpenGLPaintDevice>
 #include <QOpenGLShaderProgram>
 #include <QPainter>
 #include <iostream>
+#include "OpenGLWindow.h"
 #include "Triangulation.h"
 #include "Point3D.h"
 #include "Reader.h"
@@ -38,7 +38,6 @@ OpenGLWindow::~OpenGLWindow()
 
 void OpenGLWindow::reset()
 {
-    // And now release all OpenGL resources.
     makeCurrent();
     delete mProgram;
     mProgram = nullptr;
@@ -64,7 +63,6 @@ void OpenGLWindow::paintGL()
     matrix.translate(-20, -5, -170);
     matrix.rotate(rotationAngle);
     mProgram->setUniformValue(m_matrixUniform, matrix);
-
     
     glVertexAttribPointer(m_posAttr, 3, GL_FLOAT, GL_FALSE, 0, vertices);
     glVertexAttribPointer(m_colAttr, 3, GL_FLOAT, GL_FALSE, 0, colors);
@@ -145,11 +143,11 @@ void OpenGLWindow::initializeGL()
             // Get the index of the current vertex of the triangle
             int vertexIndex;
             if (i == 0)
-                vertexIndex = triangle.v1();
+                vertexIndex = triangle.vertex1();
             else if (i == 1)
-                vertexIndex = triangle.v2();
+                vertexIndex = triangle.vertex2();
             else
-                vertexIndex = triangle.v3();
+                vertexIndex = triangle.vertex3();
 
             // Append coordinates of the vertex to vertices array
             vertices[currentIndex++] = points[vertexIndex].x();

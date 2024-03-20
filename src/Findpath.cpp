@@ -12,9 +12,9 @@ Point3D Findpath::nextpoint(Point3D& currpoint, Triangulation& terrain)
 	for (auto triangle : triangles)
 	{
 		Point3D P1, P2, P3;
-		P1 = uniquepoints[triangle.v1()];
-		P2 = uniquepoints[triangle.v2()];
-		P3 = uniquepoints[triangle.v3()];
+		P1 = uniquepoints[triangle.vertex1()];
+		P2 = uniquepoints[triangle.vertex2()];
+		P3 = uniquepoints[triangle.vertex3()];
 
 		if (P1 == currpoint)
 		{
